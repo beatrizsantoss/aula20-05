@@ -1,29 +1,31 @@
-import React from 'react';
-import { Text, View, StyleSheet, Platform, Button, Alert } from 'react-native';
-
+import { Text, View, StyleSheet, Platform } from 'react-native';
+import Button from '../../components/navigation/button'
+ 
 export default function HomeScreen() {
-  const handlePress = () => {
-    Alert.alert('Apertei o Botão!');
-  };
-
+  const Clicar = () => {
+    alert("apertei no botão");
+  }
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Olá mundo, atualização de plataforma</Text>
-      <Button title="Clique Aqui" onPress={handlePress} />
+    <View style={styles.containeir}>
+      <Text style={styles.title}> Olá mundo, atualização de plataforma</Text>
+      <Button title="Clique Aqui" onPress={Clicar}/>
     </View>
-  );
+    );
 }
-
+ 
 const styles = StyleSheet.create({
-  container: {
+  containeir: {
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
   },
+ 
   title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#333',
-    padding: 20,
-  },
+fontSize: 30,
+fontWeight: 'bold',
+color: '#333',
+padding: 20,
+  }
+ 
 });
+ 
